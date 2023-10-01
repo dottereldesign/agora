@@ -1,0 +1,260 @@
+:root {
+  --fs-400: clamp(0.8594rem, 0.8177rem + 0.2083vw, 1rem);
+  --fs-500: clamp(1.0313rem, 0.9664rem + 0.3241vw, 1.25rem);
+  --fs-600: clamp(1.2375rem, 1.1412rem + 0.4815vw, 1.5625rem);
+  --fs-700: clamp(1.485rem, 1.3463rem + 0.6935vw, 1.9531rem);
+  --fs-800: clamp(1.7819rem, 1.5865rem + 0.9769vw, 2.4413rem);
+  --fs-900: clamp(2.1381rem, 1.8674rem + 1.3537vw, 3.0519rem);
+  --fs-1000: clamp(2.5663rem, 2.1963rem + 1.85vw, 3.815rem);
+  --fs-1100: clamp(3.0794rem, 2.579rem + 2.5019vw, 4.7681rem);
+  --fs-1200: clamp(3.695rem, 3.0237rem + 3.3565vw, 5.9606rem);
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+  --fw-black: 900;
+
+  --ff-primary-100: "Inter", sans-serif;
+  --ff-primary-200: "Urbanist", sans-serif;
+
+  --clr-primary-100: hsl(265, 83%, 57%);
+  --clr-primary-200: hsl(210, 100%, 98%);
+  --clr-primary-300: hsl(22, 100%, 54%);
+
+  --clr-neutral-100: black;
+  --clr-neutral-200: white;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+* {
+  font-weight: inherit;
+}
+
+body {
+  background-color: var(--clr-primary-200);
+}
+
+/* typography */
+h1,
+h2,
+h3,
+h4 {
+  color: var(--clr-neutral-100);
+  font-family: var(--ff-primary-200);
+}
+
+.intro {
+  color: var(--clr-neutral-100);
+  font-family: var(--ff-primary-100);
+  font-size: var(--fs-700);
+}
+
+.subheading {
+  color: var(--clr-neutral-100);
+  font-family: var(--ff-primary-100);
+  font-size: var(--fs-600);
+  line-height: 1;
+  font-weight: var(--fw-semi-bold);
+}
+
+.body {
+  color: var(--clr-neutral-100);
+  font-family: var(--ff-primary-100);
+  font-size: var(--fs-500);
+}
+
+h1 {
+  font-size: var(--fs-1200);
+  font-weight: var(--fw-extra-bold);
+  line-height: 0.8;
+}
+
+/* buttons & links */
+.link-01 {
+  color: var(--clr-neutral-200);
+  font-family: var(--ff-primary-100);
+  font-size: var(--fs-500);
+  text-decoration: none;
+  font-weight: var(--fw-bold);
+  background-color: var(--clr-primary-300);
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 35px;
+  border: 2px solid black;
+  margin: 16px auto 0 auto;
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: var(--clr-primary-100);
+  padding: 16px;
+}
+
+.header_logo {
+  font-family: var(--ff-primary-200);
+  font-size: 2.375em;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
+
+.header_nav-menu {
+  background-color: var(--clr-primary-100);
+  border: 3px solid white;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.375em;
+  font-family: var(--ff-primary-100);
+  font-weight: 700;
+  width: 100px;
+  cursor: pointer;
+}
+
+nav ul {
+  font-family: var(--ff-primary-100);
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 60px);
+  left: 0;
+  flex-direction: column;
+  align-items: center;
+  max-height: 0;
+  overflow: hidden;
+  top: 44px;
+  padding: 0;
+}
+
+nav ul a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li {
+  text-align: center;
+  list-style-type: none;
+  font-size: var(--fs-600);
+  padding: 8px 0;
+}
+
+nav ul li:hover {
+  background-color: #8e45f5;
+}
+
+nav ul.open {
+  max-height: 100vh;
+  overflow: visible;
+  background-color: var(--clr-primary-100);
+}
+
+.header_nav-bold {
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .header_nav-menu {
+    display: none;
+  }
+}
+
+/* main */
+main {
+  margin: 32px 0 0 0;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.subheading_container {
+  margin-top: 32px;
+}
+
+.subheading:not(:first-child) {
+  margin-top: 8px;
+}
+
+.body {
+  margin-top: 16px;
+}
