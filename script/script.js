@@ -35,3 +35,24 @@ function headerLogoClick() {
     navToggler.click();
   }
 }
+
+// JavaScript to toggle accordion items
+const accordionItems = document.querySelectorAll(".accordion-item");
+
+accordionItems.forEach((item) => {
+  const header = item.querySelector(".accordion-header");
+  const content = item.querySelector(".accordion-content");
+
+  header.addEventListener("click", () => {
+    content.classList.toggle("active");
+    const icon = header.querySelector(".accordion-icon");
+    icon.textContent = content.classList.contains("active") ? "-" : "+";
+
+    // Toggle the visibility of the content
+    if (content.classList.contains("active")) {
+      content.style.display = "block";
+    } else {
+      content.style.display = "none";
+    }
+  });
+});
