@@ -321,7 +321,6 @@ main {
 
 .body {
   margin-top: 16px;
-  max-inline-size: 350px;
 }
 
 .icon_container {
@@ -523,12 +522,13 @@ footer {
   border-bottom: 1px solid #ccc;
   margin-bottom: 10px;
   border-radius: 5px;
+  display: flex; /* Add this line to make the items flex containers */
+  flex-direction: column; /* Stack the header and content vertically */
 }
 
 .accordion-header {
   padding: 10px;
   display: flex;
-
   justify-content: space-between;
   cursor: pointer;
 }
@@ -542,9 +542,9 @@ footer {
 }
 
 .accordion-content {
-  display: none;
   padding: 10px;
   background-color: #fff;
+  width: 100%; /* Make the answer content take up 100% width */
 }
 
 .body {

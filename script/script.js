@@ -35,13 +35,14 @@ function headerLogoClick() {
     navToggler.click();
   }
 }
-
-// JavaScript to toggle accordion items
 const accordionItems = document.querySelectorAll(".accordion-item");
 
 accordionItems.forEach((item) => {
   const header = item.querySelector(".accordion-header");
   const content = item.querySelector(".accordion-content");
+
+  // Initially hide the content
+  content.style.display = "none"; // Add this line
 
   header.addEventListener("click", () => {
     content.classList.toggle("active");
