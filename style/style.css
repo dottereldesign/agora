@@ -305,10 +305,19 @@ nav ul.open {
 /* main */
 main {
   width: fit-content;
-  margin: 32px auto 0 auto;
-  padding: 0 16px;
+  margin: 24px auto 0 auto;
+
   display: flex;
   flex-direction: column;
+}
+
+main p,
+main h1 {
+  padding: 0 16px;
+}
+
+.intro {
+  margin: 16px 0 0 0;
 }
 
 .subheading_container {
@@ -563,4 +572,18 @@ footer {
   padding: 0;
   margin: 4px 0 0 0;
   line-height: 0;
+}
+
+picture {
+  width: fit-content;
+  height: auto;
+}
+
+.hero_img {
+  width: 100%;
+  height: auto;
+}
+
+.info picture {
+  margin: 16px 0 0 0;
 }
