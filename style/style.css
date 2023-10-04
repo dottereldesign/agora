@@ -1,4 +1,5 @@
 :root {
+  /* Font Sizes */
   --fs-400: clamp(0.8594rem, 0.8177rem + 0.2083vw, 1rem);
   --fs-500: clamp(1.0313rem, 0.9664rem + 0.3241vw, 1.25rem);
   --fs-600: clamp(1.2375rem, 1.1412rem + 0.4815vw, 1.5625rem);
@@ -9,6 +10,7 @@
   --fs-1100: clamp(3.0794rem, 2.579rem + 2.5019vw, 4.7681rem);
   --fs-1200: clamp(3.695rem, 3.0237rem + 3.3565vw, 5.9606rem);
 
+  /* Font Weights */
   --fw-light: 300;
   --fw-regular: 400;
   --fw-medium: 500;
@@ -17,17 +19,38 @@
   --fw-extra-bold: 800;
   --fw-black: 900;
 
+  /* Font Families */
   --ff-primary-100: "Inter", sans-serif;
   --ff-primary-200: "Urbanist", sans-serif;
 
-  --clr-primary-100: hsl(265, 83%, 57%);
-  --clr-primary-200: hsl(210, 100%, 98%);
-  --clr-primary-300: hsl(22, 100%, 54%);
-  --clr-primary-400: hsl(217, 100%, 61%);
-  --clr-primary-500: hsl(238, 87%, 59%);
+  /* Colour Palette */
+  --clr-primary-100: hsl(265, 77%, 52%);
+  --clr-primary-200: hsl(178, 91%, 21%);
+  --clr-primary-300: hsl(198, 93%, 28%);
 
-  --clr-neutral-100: black;
-  --clr-neutral-200: white;
+  --clr-secondary-100: #2684ff;
+  --clr-secondary-200: #ff5630;
+  --clr-secondary-300: #ff8b00;
+  --clr-secondary-400: #36b37e;
+
+  --clr-neutral-100: #172b4d;
+  --clr-neutral-200: hsl(0, 0%, 100%);
+  --clr-neutral-300: #f7fbfe;
+
+  /* Spacing */
+  --spacing-xxxs: 4px;
+  --spacing-xxs: 8px;
+  --spacing-xs: 16px;
+  --spacing-sm: 24px;
+  --spacing-md: 32px;
+  --spacing-lg: 40px;
+  --spacing-xl: 48px;
+  --spacing-2xl: 56px;
+  --spacing-3xl: 64px;
+  --spacing-4xl: 72px;
+  --spacing-5xl: 80px;
+  --spacing-6xl: 88px;
+  --spacing-7xl: 96px;
 }
 
 /* Box sizing rules */
@@ -109,7 +132,7 @@ select {
 }
 
 body {
-  background-color: var(--clr-primary-200);
+  background-color: var(--clr-neutral-300);
 }
 
 /* typography */
@@ -161,7 +184,7 @@ h1 {
 
 h2 {
   font-size: var(--fs-800);
-  font-weight: var(--fw-bold);
+  font-weight: var(--fw-extra-bold);
   line-height: 1;
 }
 
@@ -197,22 +220,24 @@ footer small {
   font-size: var(--fs-400);
 }
 
-/* buttons & links */
+/* buttons */
 .link-01 {
   color: var(--clr-neutral-200);
-  font-family: var(--ff-primary-100);
-  font-size: var(--fs-500);
+  font-family: var(--ff-primary-200);
+  font-size: var(--fs-600);
   text-decoration: none;
   font-weight: var(--fw-bold);
-  background-color: var(--clr-primary-300);
+  background-color: var(--clr-secondary-300);
   border-radius: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 120px;
-  height: 35px;
-  border: 2px solid black;
-  margin: 16px auto 0 auto;
+  /* width: 120px;
+  height: 35px; */
+  width: fit-content;
+  padding: 4px 16px;
+  border: 2px solid white;
+  margin: 32px auto 0 auto;
 }
 
 /* icons */
@@ -306,7 +331,7 @@ nav ul.open {
 main {
   width: fit-content;
   margin: 24px auto 0 auto;
-
+  background-color: #f7fbfe;
   display: flex;
   flex-direction: column;
 }
@@ -337,6 +362,48 @@ main h1 {
   width: fit-content;
 }
 
+@media (min-width: 1200px) {
+  /* main */
+  main {
+    width: min(100%, 1400px);
+    margin: 24px auto 0 auto;
+    background-color: #f7fbfe;
+    /* display: flex;
+    flex-direction: column; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 40px;
+    align-items: center;
+    gap: 40px;
+  }
+
+  main p,
+  main h1 {
+    padding: 0 16px;
+  }
+
+  .intro {
+    margin: 0px 0 0 0;
+  }
+
+  .subheading_container {
+    margin-top: 48px;
+  }
+
+  .subheading:not(:first-child) {
+    margin-top: 12px;
+  }
+
+  .body {
+    margin-top: 32px;
+    max-inline-size: 600px;
+  }
+
+  .icon_container {
+    margin: 0 auto 0 auto;
+    width: fit-content;
+  }
+}
+
 /* section - news */
 .news {
   padding: 0 16px;
@@ -351,7 +418,7 @@ main h1 {
   border-radius: 15px;
   max-width: 328px;
 }
-
+/* 
 .news_card-01::after {
   content: "Auction Insights";
   display: flex;
@@ -360,7 +427,7 @@ main h1 {
   position: absolute;
   width: 250px;
   height: 35px;
-  background-color: var(--clr-primary-400);
+  background-color: var(--clr-secondary-100);
   top: 175px;
   left: 0;
 }
@@ -373,7 +440,7 @@ main h1 {
   position: absolute;
   width: 250px;
   height: 35px;
-  background-color: var(--clr-primary-400);
+  background-color: var(--clr-secondary-100);
   top: 175px;
   left: 0;
 }
@@ -386,7 +453,7 @@ main h1 {
   position: absolute;
   width: 250px;
   height: 35px;
-  background-color: var(--clr-primary-400);
+  background-color: var(--clr-secondary-100);
   top: 175px;
   left: 0;
 }
@@ -399,10 +466,10 @@ main h1 {
   position: absolute;
   width: 250px;
   height: 35px;
-  background-color: var(--clr-primary-400);
+  background-color: var(--clr-secondary-100);
   top: 175px;
   left: 0;
-}
+} */
 
 .news_card img {
   width: 100%;
@@ -416,6 +483,44 @@ main h1 {
 .news_card-body {
   margin-top: 8px;
   padding: 0 16px 16px 16px;
+}
+
+@media (min-width: 1200px) {
+  /* section - news */
+  .news {
+    padding: 0 16px;
+    width: fit-content;
+    margin: 48px auto 0 auto;
+  }
+
+  .grid_news-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    width: min(100%, 1400px);
+  }
+
+  .news_card {
+    position: relative;
+    background-color: var(--clr-neutral-200);
+    margin: 24px 0 0 0;
+    border-radius: 15px;
+    max-width: 328px;
+  }
+
+  .news_card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .news_card h3 {
+    padding: 0 16px;
+  }
+
+  .news_card-body {
+    margin-top: 8px;
+    padding: 0 16px 16px 16px;
+  }
 }
 
 /* section - feature */
@@ -440,6 +545,35 @@ main h1 {
   text-align: center;
 }
 
+@media (min-width: 1200px) {
+  /* section - feature */
+  .grid_feature-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  .feature {
+    padding: 0 16px;
+    width: fit-content;
+    margin: 48px auto 0 auto;
+  }
+
+  .feature_card {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--clr-neutral-200);
+    border-radius: 25px;
+    padding: 16px;
+    max-width: 328px;
+  }
+
+  .feature_card-body {
+    text-align: center;
+  }
+}
+
 /* section - info */
 .info {
   padding: 0 16px;
@@ -452,12 +586,67 @@ main h1 {
   padding: 0 16px;
   width: fit-content;
   margin: 48px auto 0 auto;
+  background-color: var(--clr-neutral-300);
+}
+
+/* section - accordion */
+.accordion {
+  width: 100%;
+  max-width: 600px;
+  margin: 48px auto;
+  padding: 0 16px;
+}
+
+.accordion_questions {
+  margin-top: 24px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-header {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.accordion-header h3 {
+  margin: 0;
+  width: 300px;
+  padding-right: 8px;
+  font-size: var(--fs-500);
+  font-family: var(--ff-primary-100);
+}
+
+.accordion-content {
+  padding: 10px;
+  background-color: #fff;
+  width: 100%;
+}
+
+.accordion-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  padding: 0;
+  margin: 4px 0 0 0;
+  line-height: 0;
 }
 
 /* section - getInTouch */
 .getInTouch {
-  margin-top: 48px;
+  margin: 48px auto 0 auto;
   padding: 0 16px;
+  width: min(100%, 800px);
 }
 
 .getInTouch textarea {
@@ -478,16 +667,25 @@ textarea {
   margin-bottom: 0;
 }
 
+input[type="text"],
+input[type="email"] {
+  max-width: 300px;
+}
+
+textarea {
+  height: 170px;
+}
+
 .form_submit {
   font-family: var(--ff-primary-200);
   font-weight: var(--fw-semi-bold);
   font-size: var(--fs-600);
   margin: 24px 0 0 0;
   color: var(--clr-neutral-200);
-  background-color: var(--clr-primary-100);
-  border: 2px solid var(--clr-neutral-100);
+  background-color: var(--clr-secondary-400);
+  border: none;
   border-radius: 25px;
-  padding: 5px 15px;
+  padding: 4px 16px;
 }
 
 .form_message-label {
@@ -499,7 +697,8 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--clr-primary-500);
+
+  background-color: var(--clr-primary-100);
   margin: 48px 0 0 0;
   padding: 32px 16px;
 }
@@ -509,69 +708,15 @@ footer {
   margin: 24px 0;
 }
 
+footer .body {
+  max-inline-size: 80ch;
+  text-align: center;
+}
+
 .footer_icon-container a {
   color: white;
   padding: 0 8px;
-  font-size: var(--fs-800);
-}
-
-/* Add your desired styles here */
-.accordion {
-  width: 100%;
-  max-width: 600px;
-  margin: 48px auto;
-  padding: 0 16px;
-}
-
-.accordion_questions {
-  margin-top: 24px;
-}
-
-.accordion-item {
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  display: flex; /* Add this line to make the items flex containers */
-  flex-direction: column; /* Stack the header and content vertically */
-}
-
-.accordion-header {
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-}
-
-.accordion-header h3 {
-  margin: 0;
-  width: 300px;
-  padding-right: 8px;
-  font-size: var(--fs-500);
-  font-family: var(--ff-primary-100);
-}
-
-.accordion-content {
-  padding: 10px;
-  background-color: #fff;
-  width: 100%; /* Make the answer content take up 100% width */
-}
-
-.body {
-  display: block;
-  width: 100%;
-}
-
-.accordion-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid black;
-  width: 15px;
-  height: 15px;
-  border-radius: 100%;
-  padding: 0;
-  margin: 4px 0 0 0;
-  line-height: 0;
+  font-size: var(--fs-700);
 }
 
 picture {
@@ -586,4 +731,59 @@ picture {
 
 .info picture {
   margin: 16px 0 0 0;
+}
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #bebebe;
+}
+
+main,
+section.getInTouch,
+section.accordion,
+section.news,
+section.feature,
+section.testimonials,
+section.info,
+footer {
+  margin-top: 48px;
+}
+
+@media (min-width: 768px) {
+  main,
+  section.getInTouch,
+  section.accordion,
+  section.news,
+  section.feature,
+  section.testimonials,
+  section.info,
+  footer {
+    margin-top: 64px;
+  }
+}
+
+@media (min-width: 1400px) {
+  main,
+  section.getInTouch,
+  section.accordion,
+  section.news,
+  section.feature,
+  section.testimonials,
+  section.info,
+  footer {
+    margin-top: 96px;
+  }
+}
+
+p {
+  max-inline-size: 700px;
 }
