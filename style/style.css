@@ -30,8 +30,8 @@
 
   --clr-secondary-100: #2684ff;
   --clr-secondary-200: #ff5630;
-  --clr-secondary-300: #f38600;
-  --clr-secondary-400: #259e6b;
+  --clr-secondary-300: #f0790a;
+  --clr-secondary-400: #0ba062;
 
   --clr-neutral-100: #172b4d;
   --clr-neutral-200: hsl(0, 0%, 100%);
@@ -819,56 +819,6 @@ footer {
 
 p {
   max-inline-size: 700px;
-}
-
-/* Animation */
-.highlight__animation-01 {
-  -webkit-animation: 2.5s highlight 1s 1 normal forwards;
-  animation: 1.5s highlight 1.5s 1 normal forwards;
-  background-color: none;
-  background: linear-gradient(
-    90deg,
-    hsla(51, 100%, 50%, 0.74) 50%,
-    rgba(255, 255, 255, 0) 50%
-  );
-  background-size: 200% 100%;
-  background-position: 100% 0;
-}
-
-.highlight__animation-02 {
-  animation: 2.5s highlight 2s 1 normal forwards;
-  background-color: none;
-  background: linear-gradient(
-    90deg,
-    hsla(184, 100%, 63%, 0.5) 50%,
-    rgba(255, 255, 255, 0) 50%
-  );
-  background-size: 200% 100%;
-  background-position: 100% 0;
-}
-
-.highlight__animation-03 {
-  animation: 2.5s highlight 3s 1 normal forwards;
-  background-color: none;
-  background: linear-gradient(
-    90deg,
-    hsla(56, 100%, 50%, 0.767) 50%,
-    rgba(255, 255, 255, 0) 50%
-  );
-  background-size: 200% 100%;
-  background-position: 100% 0;
-}
-
-@-webkit-keyframes highlight {
-  to {
-    background-position: 0 0;
-  }
-}
-
-@keyframes highlight {
-  to {
-    background-position: 0 0;
-  }
 }
 
 .footer_icon-container img {
