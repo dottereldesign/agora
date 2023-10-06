@@ -21,13 +21,12 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Urbanist:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-
   </head>
 
   <body>
-    <header>
+    <header role="banner">
       <a href="#" class="header_logo">agora</a>
-      <nav>
+      <nav role="navigation">
         <button class="header_nav-menu">Menu</button>
         <ul>
           <li class="header_nav-bold"><a href="#">Home</a></li>
@@ -37,7 +36,7 @@
       </nav>
     </header>
 
-    <main>
+    <main role="main">
       <picture>
         <source
           srcset="image/webp/hero_img-550.webp"
@@ -81,14 +80,32 @@
         <a class="link-01" href="#">Join Today</a>
       </div>
       <div class="icon_container">
-        <a href="#"><img src="image/facebook.svg" alt="Facebook logo." width="auto" height="auto"></i></a>
-        <a href="#"><img src="image/instagram.svg" alt="Instagram logo." width="auto" height="auto"></i></a>
+        <a href="#"
+          ><img
+            src="image/facebook.svg"
+            alt="Facebook logo."
+            width="auto"
+            height="auto"
+        /></a>
+        <a href="#"
+          ><img
+            src="image/instagram.svg"
+            alt="Instagram logo."
+            width="auto"
+            height="auto"
+        /></a>
 
-        <a href="#"><img src="image/twitter.svg" alt="Twitter logo." width="auto" height="auto"></i></a>
+        <a href="#"
+          ><img
+            src="image/twitter.svg"
+            alt="Twitter logo."
+            width="auto"
+            height="auto"
+        /></a>
       </div>
     </main>
 
-    <section class="news">
+    <section class="news" role="region" aria-label="News">
       <h2>News</h2>
       <div class="grid_news-container">
         <article class="news_card news_card-01">
@@ -109,7 +126,9 @@
               class="hero_img"
               src="image/webp/news_img_01-300.webp"
               alt="A computer sat on a desk with a graph displayed on it."
-              decoding="async" width="auto" height="auto"
+              decoding="async"
+              width="auto"
+              height="auto"
             />
           </picture>
           <h3>Unlock the Power of Online Auctions</h3>
@@ -137,7 +156,9 @@
               class="hero_img"
               src="image/webp/news_img_02-300.webp"
               alt="A woman with her elbow on the table with her head resting on her hand."
-              decoding="async" width="auto" height="auto"
+              decoding="async"
+              width="auto"
+              height="auto"
             />
           </picture>
           <h3>Streamline Your Operations</h3>
@@ -166,7 +187,9 @@
               class="hero_img"
               src="image/webp/news_img_03-300.webp"
               alt="A person entering their credit card details into their laptop."
-              decoding="async" width="auto" height="auto"
+              decoding="async"
+              width="auto"
+              height="auto"
             />
           </picture>
           <h3>Trust Through Transparency</h3>
@@ -195,7 +218,9 @@
               class="hero_img"
               src="image/webp/news_img_04-300.webp"
               alt="3 people having brunch and talking about business."
-              decoding="async" width="auto" height="auto"
+              decoding="async"
+              width="auto"
+              height="auto"
             />
           </picture>
 
@@ -209,11 +234,16 @@
       </div>
     </section>
 
-    <section class="feature">
+    <section class="feature" role="region" aria-label="Features">
       <h2>Features</h2>
       <div class="grid_feature-container">
         <article class="feature_card">
-          <img src="image/feature_card-01.svg" alt="An icon of a briefcase."  width="auto" height="auto"/>
+          <img
+            src="image/feature_card-01.svg"
+            alt="An icon of a briefcase."
+            width="auto"
+            height="auto"
+          />
           <h3>Transparency</h3>
           <p class="feature_card-body body">
             Agora's transparent auction system and user reviews empower you to
@@ -222,7 +252,12 @@
         </article>
 
         <article class="feature_card">
-          <img src="image/feature_card-02.svg" alt="An icon of a cart." width="auto" height="auto"/>
+          <img
+            src="image/feature_card-02.svg"
+            alt="An icon of a cart."
+            width="auto"
+            height="auto"
+          />
           <h3>Extend</h3>
           <p class="feature_card-body body">
             Reach a diverse range of potential buyers or sellers across New
@@ -231,7 +266,12 @@
         </article>
 
         <article class="feature_card">
-          <img src="image/feature_card-03.svg" alt="An icon of a house with a timer on it." width="auto" height="auto"/>
+          <img
+            src="image/feature_card-03.svg"
+            alt="An icon of a house with a timer on it."
+            width="auto"
+            height="auto"
+          />
           <h3>Accelerate</h3>
           <p class="feature_card-body body">
             Skip the lengthy negotiation processes. Agora accelerates your
@@ -241,7 +281,7 @@
       </div>
     </section>
 
-    <section class="info">
+    <section class="info" role="region" aria-label="Info">
       <div class="info_text">
         <h2>Buyers and Sellers</h2>
         <h3>Join Agora Today</h3>
@@ -284,12 +324,14 @@
           class="hero_img"
           src="image/webp/info_img-01-350.webp"
           alt="3 images of retailers at work smiling and 1 image of a team meeting."
-          decoding="async" width="auto" height="auto"
+          decoding="async"
+          width="auto"
+          height="auto"
         />
       </picture>
     </section>
 
-    <section class="testimonials">
+    <section class="testimonials" role="region" aria-label="Testimonials">
       <article class="testimonials_card">
         <h2>Testimonials</h2>
         <h3>Richie Kingi</h3>
@@ -306,11 +348,20 @@
       </article>
     </section>
 
-    <section class="accordion">
+    <section
+      class="accordion"
+      role="region"
+      aria-label="Frequently Asked Questions"
+    >
       <h2>Frequently Asked Questions</h2>
       <p class="body">Have questions? We're here to help.</p>
       <div class="accordion_questions">
-        <div class="accordion-item">
+        <div
+          class="accordion-item"
+          role="button"
+          tabindex="0"
+          aria-expanded="false"
+        >
           <div class="accordion-header">
             <h3>What is Agora and how does it work?</h3>
             <span class="accordion-icon">+</span>
@@ -325,7 +376,12 @@
             </p>
           </div>
         </div>
-        <div class="accordion-item">
+        <div
+          class="accordion-item"
+          role="button"
+          tabindex="0"
+          aria-expanded="false"
+        >
           <div class="accordion-header">
             <h3>How does the chat feature enhance networking?</h3>
             <span class="accordion-icon">+</span>
@@ -346,7 +402,12 @@
           </div>
         </div>
 
-        <div class="accordion-item">
+        <div
+          class="accordion-item"
+          role="button"
+          tabindex="0"
+          aria-expanded="false"
+        >
           <div class="accordion-header">
             <h3>Is Agora's auction system secure and transparent?</h3>
             <span class="accordion-icon">+</span>
@@ -368,7 +429,12 @@
             </p>
           </div>
         </div>
-        <div class="accordion-item">
+        <div
+          class="accordion-item"
+          role="button"
+          tabindex="0"
+          aria-expanded="false"
+        >
           <div class="accordion-header">
             <h3>How do I get started on Agora?</h3>
             <span class="accordion-icon">+</span>
@@ -392,7 +458,7 @@
 
     <section class="getInTouch">
       <h2>We’d love to hear from you, get in touch</h2>
-      <form action="submit_form.php" method="post">
+      <form action="submit_form.php" method="post" role="form">
         <label class="form_message-label" for="name">Name:</label>
         <input type="text" id="name" name="name" required />
 
@@ -416,10 +482,28 @@
         business success.
       </p>
       <div class="footer_icon-container">
-        <a href="#"><img src="image/facebook.svg" alt="Facebook logo." width="auto" height="auto"></i></a>
-        <a href="#"><img src="image/instagram.svg" alt="Instagram logo." width="auto" height="auto"></i></a>
+        <a href="#"
+          ><img
+            src="image/facebook.svg"
+            alt="Facebook logo."
+            width="auto"
+            height="auto"
+        /></a>
+        <a href="#"
+          ><img
+            src="image/instagram.svg"
+            alt="Instagram logo."
+            width="auto"
+            height="auto"
+        /></a>
 
-        <a href="#"><img src="image/twitter.svg" alt="Twitter logo." width="auto" height="auto"></i></a>
+        <a href="#"
+          ><img
+            src="image/twitter.svg"
+            alt="Twitter logo."
+            width="auto"
+            height="auto"
+        /></a>
       </div>
       <small>Copyright 2023, Agora BCDE224</small>
     </footer>
