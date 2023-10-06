@@ -24,9 +24,9 @@
   --ff-primary-200: "Urbanist", sans-serif;
 
   /* Colour Palette */
-  --clr-primary-100: hsl(265, 77%, 52%);
-  --clr-primary-200: hsl(178, 91%, 21%);
-  --clr-primary-300: hsl(198, 93%, 28%);
+  --clr-primary-100: #7526e3;
+  --clr-primary-200: #056663;
+  --clr-primary-300: #05628a;
 
   --clr-secondary-100: #2684ff;
   --clr-secondary-200: #ff5630;
@@ -141,7 +141,7 @@ h2,
 h3,
 h4 {
   color: var(--clr-neutral-100);
-  font-family: var(--ff-primary-200);
+  font-family: var(--ff-primary-100);
 }
 
 .intro {
@@ -581,6 +581,16 @@ main h1 {
   margin: 48px auto 0 auto;
 }
 
+@media (min-width: 1200px) {
+  .info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 16px;
+    width: fit-content;
+    margin: 48px auto 0 auto;
+  }
+}
+
 /* testimonials */
 .testimonials {
   padding: 0 16px;
@@ -786,4 +796,54 @@ footer {
 
 p {
   max-inline-size: 700px;
+}
+
+/* Animation */
+.highlight__animation-01 {
+  -webkit-animation: 2.5s highlight 1s 1 normal forwards;
+  animation: 1.5s highlight 1.5s 1 normal forwards;
+  background-color: none;
+  background: linear-gradient(
+    90deg,
+    hsla(56, 100%, 50%, 0.767) 50%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  background-size: 200% 100%;
+  background-position: 100% 0;
+}
+
+.highlight__animation-02 {
+  animation: 2.5s highlight 2s 1 normal forwards;
+  background-color: none;
+  background: linear-gradient(
+    90deg,
+    hsla(184, 100%, 63%, 0.5) 50%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  background-size: 200% 100%;
+  background-position: 100% 0;
+}
+
+.highlight__animation-03 {
+  animation: 2.5s highlight 3s 1 normal forwards;
+  background-color: none;
+  background: linear-gradient(
+    90deg,
+    hsla(56, 100%, 50%, 0.767) 50%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  background-size: 200% 100%;
+  background-position: 100% 0;
+}
+
+@-webkit-keyframes highlight {
+  to {
+    background-position: 0 0;
+  }
+}
+
+@keyframes highlight {
+  to {
+    background-position: 0 0;
+  }
 }
