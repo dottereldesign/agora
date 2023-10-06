@@ -30,8 +30,8 @@
 
   --clr-secondary-100: #2684ff;
   --clr-secondary-200: #ff5630;
-  --clr-secondary-300: #ff8b00;
-  --clr-secondary-400: #36b37e;
+  --clr-secondary-300: #f38600;
+  --clr-secondary-400: #259e6b;
 
   --clr-neutral-100: #172b4d;
   --clr-neutral-200: hsl(0, 0%, 100%);
@@ -147,7 +147,7 @@ h4 {
 .intro {
   color: var(--clr-neutral-100);
   font-family: var(--ff-primary-100);
-  font-size: var(--fs-700);
+  font-size: var(--fs-600);
 }
 
 .subheading {
@@ -179,7 +179,7 @@ footer .body {
 h1 {
   font-size: var(--fs-1200);
   font-weight: var(--fw-extra-bold);
-  line-height: 0.8;
+  line-height: 0.5;
 }
 
 h2 {
@@ -223,7 +223,7 @@ footer small {
 /* buttons */
 .link-01 {
   color: var(--clr-neutral-200);
-  font-family: var(--ff-primary-200);
+  font-family: var(--ff-primary-100);
   font-size: var(--fs-600);
   text-decoration: none;
   font-weight: var(--fw-bold);
@@ -244,7 +244,10 @@ footer small {
 .icon_container a {
   color: var(--clr-neutral-100);
   font-size: var(--fs-800);
-  padding: 0 4px;
+  margin: 0 8px;
+
+  width: 33px;
+  height: auto;
 }
 
 /* header */
@@ -346,7 +349,7 @@ main h1 {
 }
 
 .subheading_container {
-  margin-top: 32px;
+  margin-top: 40px;
 }
 
 .subheading:not(:first-child) {
@@ -358,8 +361,15 @@ main h1 {
 }
 
 .icon_container {
+  display: flex;
   margin: 16px auto 0 auto;
   width: fit-content;
+}
+
+.icon_container img {
+  background-color: var(--clr-neutral-300);
+  width: 35px;
+  margin: 16px 4px 0 4px;
 }
 
 @media (min-width: 1200px) {
@@ -374,6 +384,19 @@ main h1 {
     grid-template-columns: repeat(2, 1fr) 40px;
     align-items: center;
     gap: 40px;
+  }
+
+  .icon_container {
+    display: flex;
+    margin: 16px auto 0 auto;
+    width: fit-content;
+    flex-direction: column;
+  }
+
+  .icon_container img {
+    background-color: var(--clr-neutral-300);
+    width: 35px;
+    margin: 8px 0;
   }
 
   main p,
@@ -687,7 +710,7 @@ textarea {
 }
 
 .form_submit {
-  font-family: var(--ff-primary-200);
+  font-family: var(--ff-primary-100);
   font-weight: var(--fw-semi-bold);
   font-size: var(--fs-600);
   margin: 24px 0 0 0;
@@ -805,7 +828,7 @@ p {
   background-color: none;
   background: linear-gradient(
     90deg,
-    hsla(56, 100%, 50%, 0.767) 50%,
+    hsla(51, 100%, 50%, 0.74) 50%,
     rgba(255, 255, 255, 0) 50%
   );
   background-size: 200% 100%;
@@ -846,4 +869,11 @@ p {
   to {
     background-position: 0 0;
   }
+}
+
+.footer_icon-container img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(193deg)
+    brightness(105%) contrast(102%);
+  width: 33px;
+  height: auto;
 }
