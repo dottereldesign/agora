@@ -135,7 +135,7 @@ h4 {
   font-weight: var(--fw-semi-bold);
 }
 
-.feature .body,
+.feature_card-body,
 .accordion .body {
   color: var(--clr-neutral-100);
   font-family: var(--ff-primary-100);
@@ -639,7 +639,7 @@ feature_card-body {
   text-align: center;
 }
 
-.grid_feature-container {
+.feature__grid {
   background-color: rgba(4, 0, 255, 0.075);
   padding: 24px;
   border-radius: 0;
@@ -647,7 +647,7 @@ feature_card-body {
 }
 
 @media (min-width: 600px) {
-  .grid_feature-container {
+  .feature__grid {
     background-color: rgba(4, 0, 255, 0.075);
     padding: 24px;
     border-radius: 0;
@@ -657,7 +657,7 @@ feature_card-body {
 
 @media (min-width: 800px) {
   /* section - feature */
-  .grid_feature-container {
+  .feature__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
@@ -823,10 +823,17 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   background-color: var(--clr-primary-100);
   margin: 48px 0 0 0;
   padding: 32px 16px;
+}
+
+.footer_logo {
+  font-family: var(--ff-primary-200);
+  font-size: 2.375em;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
 }
 
 .footer_icon-container {
@@ -845,6 +852,13 @@ footer .body {
   font-size: var(--fs-700);
 }
 
+.footer_icon-container img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(193deg)
+    brightness(105%) contrast(102%);
+  width: 33px;
+  height: auto;
+}
+
 picture {
   width: fit-content;
   height: auto;
@@ -859,6 +873,7 @@ picture {
   margin: 16px 0 0 0;
 }
 
+/* Scrollbar */
 body::-webkit-scrollbar {
   width: 1em;
 }
@@ -873,6 +888,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #bebebe;
 }
 
+/* Section Spacing */
 section.getInTouch,
 section.accordion,
 section.news,
@@ -920,13 +936,6 @@ main {
 
 p {
   max-inline-size: 700px;
-}
-
-.footer_icon-container img {
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(193deg)
-    brightness(105%) contrast(102%);
-  width: 33px;
-  height: auto;
 }
 
 /* Subpage - Signup (Grid) */
