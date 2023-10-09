@@ -954,7 +954,7 @@ p {
 .signup_page {
   display: grid;
   width: min(100%, 1400px);
-  margin: 64px auto 0 auto;
+  margin: 64px auto 180px auto;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
 }
