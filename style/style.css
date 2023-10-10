@@ -33,11 +33,11 @@
   --clr-secondary-300: #f0790a;
   --clr-secondary-400: #0ba062;
 
-  --clr-neutral-100: #172b4d;
+  --clr-neutral-100: #25252d;
   --clr-neutral-200: hsl(0, 0%, 100%);
   --clr-neutral-300: #f7fbfe;
   --clr-neutral-400: #a1a3a4;
-  --clr-neutral-500: #6c6c6c;
+  --clr-neutral-500: #6c6c84;
 }
 
 /* CSS Reset */
@@ -146,7 +146,6 @@ legend {
   font-size: var(--fs-500);
   font-weight: var(--fw-bold);
   line-height: 1.2;
-  margin-top: 24px;
   color: var(--clr-neutral-100);
   font-family: var(--ff-primary-100);
 }
@@ -945,7 +944,7 @@ picture {
 
 /* Subpage - Signup (Grid) */
 .signup {
-  width: min(100%, 490px);
+  width: min(100%, 350px);
   margin: 64px auto 0 auto;
 }
 
@@ -953,24 +952,26 @@ picture {
   width: fit-content;
   margin-top: 16px;
   font-family: var(--ff-primary-100);
+  font-size: 13px;
+  font-weight: var(--fw-semi-bold);
 }
 
 .signup form input {
   margin-top: 4px;
-  border: 2px solid #bbb;
+  border: 2px solid #dedde2;
   border-radius: 4px;
-  font-size: 16.5px;
-  padding: 2px 0 2px 4px;
-  font-family: var(--ff-primary-100);
-}
-
-select {
+  font-size: 16px;
+  padding: 4px 0 4px 8px;
   font-family: var(--ff-primary-100);
 }
 
 .signup form input:focus {
   outline: none;
   border: 2px solid var(--clr-primary-100);
+}
+
+select {
+  font-family: var(--ff-primary-100);
 }
 
 .signup span {
@@ -988,15 +989,19 @@ select {
   text-decoration: none;
   font-weight: var(--fw-semi-bold);
   background-color: var(--clr-primary-100);
-  border-radius: 25px;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: fit-content;
-  padding: 4px 16px;
+  width: 100%;
+  padding: 4px;
   border: 2px solid white;
   margin-top: 16px;
   margin: 24px auto 0 auto;
+}
+
+.signup .link-02:hover {
+  cursor: pointer;
 }
 
 .signup_form-pwd {
@@ -1036,7 +1041,7 @@ select {
   color: var(--clr-neutral-500);
   font-family: var(--ff-primary-100);
   margin-top: 16px;
-  max-width: fit-content;
+  width: min(100%, 350px);
 }
 
 .signup h2 {
@@ -1045,8 +1050,8 @@ select {
 
 fieldset {
   border: none;
-  margin: 32px 0 0 0;
-  padding: 0 0 0 0;
+  margin: 40px 0 0 0;
+  padding: 0;
   width: min(100%, 490px);
 }
 
@@ -1073,23 +1078,34 @@ input[type="email"] {
 }
 
 *::placeholder {
-  color: #aaa;
-  font-size: 14px;
+  color: var(--clr-neutral-500);
+  font-size: 13px;
 }
 
 #username,
 #password,
 #confirmPassword {
-  width: min(100%, 247px);
+  width: min(100%, 350px);
 }
 
 #email {
-  width: min(100%, 490px);
+  width: min(100%, 350px);
 }
 
 #businessName,
 #phoneNumber,
 #nzBusinessNumber,
 #nzGstNumber {
-  width: min(100%, 322px);
+  width: min(100%, 350px);
+}
+
+#role,
+#location,
+#hqlocation {
+  width: min(100%, 350px);
+  padding: 4px 0 4px 8px;
+  border: 2px solid #dedde2;
+  color: rgb(67, 67, 67);
+  font-size: 14px;
+  font-weight: var(--fw-semi-bold);
 }

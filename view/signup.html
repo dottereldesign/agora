@@ -52,7 +52,7 @@
         <fieldset>
           <legend>Personal Details</legend>
 
-          <label for="username">Username: <span>*</span></label>
+          <label for="username">Username <span>*</span></label>
           <input
             type="text"
             id="username"
@@ -61,7 +61,7 @@
             required
           />
 
-          <label for="password">Password: <span>*</span></label>
+          <label for="password">Password <span>*</span></label>
           <input
             type="password"
             id="password"
@@ -71,7 +71,7 @@
           />
           <span class="signup_form-pwd"></span>
 
-          <label for="confirmPassword">Confirm Password: <span>*</span></label>
+          <label for="confirmPassword">Confirm Password <span>*</span></label>
           <input
             placeholder="Re-enter your password"
             type="password"
@@ -81,7 +81,7 @@
           />
           <span class="signup_form-confpwd"></span>
 
-          <label for="email">Email Address: <span>*</span></label>
+          <label for="email">Email Address <span>*</span></label>
           <input
             type="email"
             id="email"
@@ -90,15 +90,27 @@
             required
           />
 
-          <label for="location">Location: <span>*</span></label>
+          <label for="location">Location <span>*</span></label>
           <select id="location" name="location" required>
-            <option value="none">Please Select</option>
+            <option value="none">Select your location</option>
             <option value="Auckland">Auckland</option>
+            <option value="Bay of Plenty">Bay of Plenty</option>
+            <option value="Canterbury">Canterbury</option>
+            <option value="Gisborne">Gisborne</option>
+            <option value="Hawke's Bay">Hawke's Bay</option>
+            <option value="Manawatu-Whanganui">Manawatu</option>
+            <option value="Marlborough">Marlborough</option>
+            <option value="Nelson">Nelson</option>
+            <option value="Northland">Northland</option>
+            <option value="Otago">Otago</option>
+            <option value="Southland">Southland</option>
+            <option value="Taranaki">Taranaki</option>
+            <option value="Tasman">Tasman</option>
+            <option value="Waikato">Waikato</option>
             <option value="Wellington">Wellington</option>
-            <option value="Christchurch">Christchurch</option>
           </select>
 
-          <label for="phoneNumber">Phone Number:</label>
+          <label for="phoneNumber">Phone Number</label>
           <input
             type="tel"
             id="phoneNumber"
@@ -106,9 +118,10 @@
             placeholder="Your phone number (optional)"
           />
 
-          <label for="role">Role: <span>*</span></label>
+          <label for="role">Role <span>*</span></label>
           <select id="role" name="role" required>
-            <option value="Buyer">Please Select</option>
+            <option value="Buyer">Select your role</option>
+            <option value="Buyer">Business Administrator</option>
             <option value="Buyer">Buyer Account</option>
             <option value="Seller">Seller Account</option>
           </select>
@@ -117,7 +130,7 @@
         <fieldset>
           <legend>Legal Business Details</legend>
 
-          <label for="businessName">Business Name: <span>*</span></label>
+          <label for="businessName">Business Name <span>*</span></label>
           <input
             type="text"
             id="businessName"
@@ -126,16 +139,28 @@
             required
           />
 
-          <label for="hqlocation">HQ Location: <span>*</span></label>
+          <label for="hqlocation">HQ Location <span>*</span></label>
           <select id="hqlocation" name="hqlocation" required>
-            <option value="none">Please Select</option>
+            <option value="none">Select your HQ location</option>
             <option value="Auckland">Auckland</option>
+            <option value="Bay of Plenty">Bay of Plenty</option>
+            <option value="Canterbury">Canterbury</option>
+            <option value="Gisborne">Gisborne</option>
+            <option value="Hawke's Bay">Hawke's Bay</option>
+            <option value="Manawatu-Whanganui">Manawatu</option>
+            <option value="Marlborough">Marlborough</option>
+            <option value="Nelson">Nelson</option>
+            <option value="Northland">Northland</option>
+            <option value="Otago">Otago</option>
+            <option value="Southland">Southland</option>
+            <option value="Taranaki">Taranaki</option>
+            <option value="Tasman">Tasman</option>
+            <option value="Waikato">Waikato</option>
             <option value="Wellington">Wellington</option>
-            <option value="Christchurch">Christchurch</option>
           </select>
 
           <label for="nzBusinessNumber"
-            >NZ Business Number: <span>*</span></label
+            >NZ Business Number <span>*</span></label
           >
           <input
             type="text"
@@ -145,12 +170,13 @@
             required
           />
 
-          <label for="nzGstNumber">NZ GST Number:</label>
+          <label for="nzGstNumber">NZ GST Number <span>*</span></label>
           <input
             type="text"
             id="nzGstNumber"
             name="nzGstNumber"
-            placeholder="Please enter your 8 or 9 digit number (optional)"
+            placeholder="Please enter your 8 or 9 digit number"
+            required
           />
         </fieldset>
 
