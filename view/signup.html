@@ -29,82 +29,139 @@
       <nav role="navigation">
         <button class="header_nav-menu">Menu</button>
         <ul>
-          <li class="header_nav-bold"><a href="../index.html">Home</a></li>
+          <li><a href="../index.html">Home</a></li>
           <li><a href="auction.html">Auction</a></li>
           <li><a href="dashboard.html">Dashboard</a></li>
-          <li><a class="signup" href="signup.html">Signup</a></li>
+          <li>
+            <a class="signup-link" href="signup.html">Signup</a>
+          </li>
           <li><a class="login" href="login.html">Login</a></li>
         </ul>
       </nav>
     </header>
 
-    <section class="signup_page">
-      <section class="signup_col-1">
-        <h2>Signup</h2>
-        <form
-          name="registrationForm"
-          onsubmit="return validateForm()"
-          action="submit.php"
-          method="post"
-        >
-          <div class="signup_form">
-            <div class="signup_form-col-1">
-              <h3>Personal Details</h3>
-              <label for="username">Username: <span>*</span></label>
-              <input type="text" name="username" required />
-              <label for="password">Password: <span>*</span></label>
-              <input type="password" name="password" required />
-              <label for="confirmPassword"
-                >Confirm Password: <span>*</span></label
-              >
-              <input type="password" name="confirmPassword" required />
-              <label for="email">Email Address: <span>*</span></label>
-              <input type="email" name="email" required />
-              <label for="location">Location: <span>*</span></label>
-              <select name="location" required>
-                <option value="none">Please Select</option>
-                <option value="Auckland">Auckland</option>
-                <option value="Wellington">Wellington</option>
-                <option value="Christchurch">Christchurch</option>
-              </select>
-              <label for="phoneNumber">Phone Number:</label>
-              <input type="tel" name="phoneNumber" required />
-              <label for="role">Role: <span>*</span></label>
-              <select name="role" required>
-                <option value="Buyer">Please Select</option>
-                <option value="Buyer">Buyer Account</option>
-                <option value="Seller">Seller Account</option>
-              </select>
-            </div>
-            <div class="signup_form-col-2">
-              <h3>Legal Business Details</h3>
-              <label for="businessName">Business Name: <span>*</span></label>
-              <input type="text" name="businessName" required />
-              <label for="location">HQ Location: <span>*</span></label>
-              <select name="hqlocation" required>
-                <option value="none">Please Select</option>
-                <option value="Auckland">Auckland</option>
-                <option value="Wellington">Wellington</option>
-                <option value="Christchurch">Christchurch</option>
-              </select>
-              <label for="nzBusinessNumber"
-                >NZ Business Number: <span>*</span></label
-              >
-              <input type="text" name="nzBusinessNumber" required />
-              <label for="nzGstNumber">NZ GST Number:</label>
-              <input type="text" name="nzGstNumber" required />
-              <input class="link-02" type="submit" value="Register" />
-            </div>
-          </div>
-        </form>
-      </section>
-      <img src="../image/signup_img-3.png" alt="" />
+    <section class="signup">
+      <h2>Signup</h2>
+      <p>We suggest using the email address you use at work.</p>
+      <form
+        name="registrationForm"
+        onsubmit="return validateForm()"
+        action="submit.php"
+        method="post"
+      >
+        <fieldset>
+          <legend>Personal Details</legend>
+
+          <label for="username">Username: <span>*</span></label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Choose a unique username"
+            required
+          />
+
+          <label for="password">Password: <span>*</span></label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter a strong password"
+            required
+          />
+          <span class="signup_form-pwd"></span>
+
+          <label for="confirmPassword">Confirm Password: <span>*</span></label>
+          <input
+            placeholder="Re-enter your password"
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            required
+          />
+          <span class="signup_form-confpwd"></span>
+
+          <label for="email">Email Address: <span>*</span></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your email address"
+            required
+          />
+
+          <label for="location">Location: <span>*</span></label>
+          <select id="location" name="location" required>
+            <option value="none">Please Select</option>
+            <option value="Auckland">Auckland</option>
+            <option value="Wellington">Wellington</option>
+            <option value="Christchurch">Christchurch</option>
+          </select>
+
+          <label for="phoneNumber">Phone Number:</label>
+          <input
+            type="tel"
+            id="phoneNumber"
+            name="phoneNumber"
+            placeholder="Your phone number (optional)"
+          />
+
+          <label for="role">Role: <span>*</span></label>
+          <select id="role" name="role" required>
+            <option value="Buyer">Please Select</option>
+            <option value="Buyer">Buyer Account</option>
+            <option value="Seller">Seller Account</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Legal Business Details</legend>
+
+          <label for="businessName">Business Name: <span>*</span></label>
+          <input
+            type="text"
+            id="businessName"
+            name="businessName"
+            placeholder="Your business name"
+            required
+          />
+
+          <label for="hqlocation">HQ Location: <span>*</span></label>
+          <select id="hqlocation" name="hqlocation" required>
+            <option value="none">Please Select</option>
+            <option value="Auckland">Auckland</option>
+            <option value="Wellington">Wellington</option>
+            <option value="Christchurch">Christchurch</option>
+          </select>
+
+          <label for="nzBusinessNumber"
+            >NZ Business Number: <span>*</span></label
+          >
+          <input
+            type="text"
+            id="nzBusinessNumber"
+            name="nzBusinessNumber"
+            placeholder="Please enter your 13 digit number"
+            required
+          />
+
+          <label for="nzGstNumber">NZ GST Number:</label>
+          <input
+            type="text"
+            id="nzGstNumber"
+            name="nzGstNumber"
+            placeholder="Please enter your 8 or 9 digit number (optional)"
+          />
+        </fieldset>
+
+        <input class="link-02" type="submit" value="Register" />
+      </form>
     </section>
 
     <footer>
-      <a href="#" class="header_logo">agora</a>
+      <a href="#" class="footer_logo">agora</a>
       <h3>Connect, Transact, Thrive with Agora: Your Business Advantage</h3>
-      <p class="body">
+      <p class="footer_body">
         Discover a new era of seamless commerce and networking with Agora's
         innovative online auction platform. Experience efficiency, transparency,
         and growth like never before. Join Agora today and redefine your
@@ -117,13 +174,16 @@
             alt="Facebook logo."
             width="auto"
             height="auto"
+            loading="lazy"
         /></a>
+
         <a href="#"
           ><img
             src="../image/instagram.svg"
             alt="Instagram logo."
             width="auto"
             height="auto"
+            loading="lazy"
         /></a>
 
         <a href="#"
@@ -132,6 +192,7 @@
             alt="Twitter logo."
             width="auto"
             height="auto"
+            loading="lazy"
         /></a>
       </div>
       <small>Copyright 2023, Agora BCDE224</small>
