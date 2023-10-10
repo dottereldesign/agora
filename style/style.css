@@ -1,5 +1,5 @@
 :root {
-  /* Font Sizes */
+  /* Font sizes */
   --fs-400: clamp(0.8594rem, 0.8177rem + 0.2083vw, 1rem);
   --fs-500: clamp(1.0313rem, 0.9664rem + 0.3241vw, 1.25rem);
   --fs-600: clamp(1.2375rem, 1.1412rem + 0.4815vw, 1.5625rem);
@@ -10,7 +10,7 @@
   --fs-1100: clamp(3.0794rem, 2.579rem + 2.5019vw, 4.7681rem);
   --fs-1200: clamp(3.695rem, 3.0237rem + 3.3565vw, 5.9606rem);
 
-  /* Font Weights */
+  /* Font weights */
   --fw-light: 300;
   --fw-regular: 400;
   --fw-medium: 500;
@@ -19,25 +19,54 @@
   --fw-extra-bold: 800;
   --fw-black: 900;
 
-  /* Font Families */
+  /* Font families */
   --ff-primary-100: "Inter", sans-serif;
   --ff-primary-200: "Urbanist", sans-serif;
 
-  /* Colour Palette */
+  /* Primary colours */
   --clr-primary-100: #7526e3;
   --clr-primary-200: #056663;
   --clr-primary-300: #05628a;
 
+  /* Secondary colours */
   --clr-secondary-100: #2684ff;
   --clr-secondary-200: #ff5630;
   --clr-secondary-300: #f0790a;
   --clr-secondary-400: #0ba062;
 
+  /* Neutral colours */
   --clr-neutral-100: #25252d;
   --clr-neutral-200: hsl(0, 0%, 100%);
   --clr-neutral-300: #f7fbfe;
   --clr-neutral-400: #a1a3a4;
   --clr-neutral-500: #6c6c84;
+
+  /* Text */
+  --agora-text-colour: #0b0c0c;
+  --agora-secondary-text-colour: #505a5f;
+
+  /* Links */
+  --agora-link-colour: #1d70b8;
+  --agora-link-hover-colour: #003078;
+  --agora-link-visited-colour: #4c2c92;
+  --agora-link-active-colour: #0b0c0c;
+
+  /* Border */
+  --agora-border-colour: #b1b4b6;
+  --agora-input-border-colour: #0b0c0c;
+
+  /* Focus state */
+  --agora-focus-colour: #ffdd00;
+  --agora-focus-text-colour: #0b0c0c;
+
+  /* Error state */
+  --agora-error-colour: #d4351c;
+
+  /* Success state */
+  --agora-success-colour: #00703c;
+
+  /* Brand colour */
+  --agora-brand-colour: #7526e3;
 }
 
 /* CSS Reset */
@@ -359,11 +388,18 @@ nav ul {
   overflow: hidden;
   top: 44px;
   padding: 0;
+  font-weight: var(--fw-semi-bold);
 }
 
 nav ul a {
-  color: white;
+  color: var(--clr-neutral-300);
   text-decoration: none;
+}
+
+.header_nav-home:hover,
+.header_nav-auction:hover,
+.header_nav-dashboard:hover {
+  border-bottom: 4px solid white;
 }
 
 nav ul li {
@@ -381,7 +417,7 @@ nav ul.open {
 }
 
 .header_nav-bold {
-  font-weight: 700;
+  font-weight: var(--fw-extra-bold);
 }
 
 .signup-link {
