@@ -37,7 +37,7 @@
           <li>
             <a class="signup-link" href="signup.html">Signup</a>
           </li>
-          <li><a class="login" href="login.html">Login</a></li>
+          <li><a class="login-link" href="login.html">Login</a></li>
         </ul>
       </nav>
     </header>
@@ -48,8 +48,8 @@
       <p>We suggest using the email address you use at work.</p>
       <form
         name="registrationForm"
-        onsubmit="return validateForm()"
-        action="submit.php"
+        onsubmit="return validateSignup()"
+        action="signup.php"
         method="post"
       >
         <fieldset>

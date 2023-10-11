@@ -35,57 +35,68 @@
             <a class="header_nav-dashboard" href="dashboard.html">Dashboard</a>
           </li>
           <li><a class="signup-link" href="signup.html">Signup</a></li>
-          <li><a class="login" href="login.html">Login</a></li>
+          <li><a class="login-link" href="login.html">Login</a></li>
         </ul>
       </nav>
     </header>
 
-    <section class="signup">
+    <section class="login">
       <h2>Login</h2>
       <h3>Welcome back!</h3>
       <div class="login_btn__wrapper">
-        <div class="login_btn">
-          <img src="../image/svg/login_google.svg" alt="" />
-        </div>
-        <div class="login_btn">
-          <img src="../image/svg/login_apple.svg" alt="" />
-        </div>
-        <div class="login_btn">
-          <img src="../image/svg/login_facebook.svg" alt="" />
-        </div>
+        <a href="#">
+          <div class="login_btn">
+            <img src="../image/svg/login_google.svg" alt="" />
+          </div>
+        </a>
+        <a href="#">
+          <div class="login_btn">
+            <img src="../image/svg/login_apple.svg" alt="" />
+          </div>
+        </a>
+        <a href="#">
+          <div class="login_btn">
+            <img src="../image/svg/login_facebook.svg" alt="" />
+          </div>
+        </a>
       </div>
+      <div class="or">or</div>
 
       <form
-        name="registrationForm"
-        onsubmit="return validateForm()"
-        action="submit.php"
+        name="loginForm"
+        onsubmit="return validateLogin()"
+        action="login.php"
         method="post"
       >
         <fieldset>
           <legend>Enter your username and password</legend>
 
-          <label for="username">Username</label>
+          <label for="loginUsername">Username</label>
           <input
             type="text"
-            id="username"
-            name="username"
+            id="loginUsername"
+            name="loginUsername"
             placeholder="Enter your username"
             required
           />
 
-          <label for="password">Password</label>
+          <label for="loginPassword">Password</label>
           <input
             type="password"
-            id="password"
-            name="password"
+            id="loginPassword"
+            name="loginPassword"
             placeholder="Enter your password"
             required
           />
-          <span class="signup_form-pwd"></span>
+          <span class="login_form-pwd"></span>
         </fieldset>
 
         <input class="link-02" type="submit" value="Login" />
       </form>
+
+      <div class="login_create">
+        <p>Don't have an account? <a href="signup.html">Create one now.</a></p>
+      </div>
     </section>
 
     <footer>

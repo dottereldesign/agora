@@ -46,7 +46,7 @@
   --agora-secondary-text-colour: #505a5f;
 
   /* Links */
-  --agora-link-colour: #1d70b8;
+  --agora-link-colour: #106cb3;
   --agora-link-hover-colour: #003078;
   --agora-link-visited-colour: #4c2c92;
   --agora-link-active-colour: #0b0c0c;
@@ -433,7 +433,7 @@ nav ul.open {
   font-weight: var(--fw-bold);
 }
 
-.login {
+.login-link {
   background-color: rgb(255, 255, 255);
   color: black;
   border-radius: 15px;
@@ -915,8 +915,8 @@ footer {
   flex-direction: column;
   align-items: center;
   background-color: var(--clr-primary-100);
-  margin: 64px 0 0 0;
-  padding: 32px 16px;
+  margin: 96px 0 0 0;
+  padding: 96px 16px 128px 16px;
 }
 
 .footer_logo {
@@ -1151,7 +1151,107 @@ input[type="email"] {
   margin: 24px auto 0 auto;
 }
 
-/* login page */
+/* login.html */
+.login {
+  width: min(100%, 350px);
+  margin: 96px auto 0 auto;
+}
+
+.login form label {
+  width: fit-content;
+  margin-top: 16px;
+  font-family: var(--ff-primary-100);
+  font-size: 13px;
+  font-weight: var(--fw-semi-bold);
+}
+
+.login form input {
+  margin-top: 4px;
+  border: 2px solid #dedde2;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 4px 0 4px 8px;
+  font-family: var(--ff-primary-100);
+}
+
+.login form input:focus {
+  outline: none;
+  border: 2px solid var(--clr-primary-100);
+}
+
+.login .link-02:hover {
+  cursor: pointer;
+}
+
+.login_form-pwd {
+  position: relative;
+}
+
+.login_form-pwd::before {
+  content: "";
+  position: absolute;
+  right: -4px;
+  top: 0;
+  background-image: url("../image/svg/disabled_visible.svg");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  width: 30px;
+  height: 30px;
+}
+
+.login h2 {
+  width: min(100%, 490px);
+}
+
+/* Login form */
+.login form {
+  width: min(100%, 490px);
+}
+
+.login fieldset {
+  border: none;
+  margin: 24px 0 0 0;
+  padding: 0;
+  width: min(100%, 490px);
+}
+
+.login legend {
+  margin: 0 0 0 -3px;
+}
+
+.login input[type="text"] {
+  max-width: initial;
+  width: min(100%, 350px);
+}
+
+*::placeholder {
+  color: var(--clr-neutral-500);
+  font-size: 13px;
+}
+
+#username,
+#password {
+  width: min(100%, 350px);
+}
+
+.login .link-02 {
+  color: var(--clr-neutral-200);
+  font-family: var(--ff-primary-100);
+  font-size: 16.5px;
+  text-decoration: none;
+  font-weight: var(--fw-semi-bold);
+  background-color: var(--clr-primary-100);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 4px;
+  border: 2px solid white;
+  margin-top: 16px;
+  margin: 24px auto 0 auto;
+}
+
 .login_btn__wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1159,6 +1259,7 @@ input[type="email"] {
   margin-top: 24px;
 }
 
+/* Login - Social media btn's */
 .login_btn img {
   width: 30px;
   height: auto;
@@ -1173,3 +1274,56 @@ input[type="email"] {
   justify-content: center;
   background-color: white;
 }
+
+.or {
+  font-family: var(--ff-primary-100);
+  font-weight: var(--fw-semi-bold);
+  color: var(--clr-neutral-500);
+  width: 100%;
+  text-align: center;
+  margin-top: 32px;
+  position: relative;
+}
+
+.or::before {
+  content: "";
+  background-color: var(--agora-border-colour);
+  width: 45%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  top: 12px;
+}
+
+.or::after {
+  content: "";
+  background-color: var(--agora-border-colour);
+  width: 45%;
+  height: 1px;
+  position: absolute;
+  right: 0;
+  top: 12px;
+}
+
+.login_create {
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 16px;
+}
+
+.login_create p {
+  font-family: var(--ff-primary-100);
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-500);
+}
+
+.login_create a {
+  text-decoration: none;
+  color: var(--agora-link-colour);
+  font-weight: var(--fw-medium);
+}
+
+/* auction.html */
+
+/* dashboard.html */
