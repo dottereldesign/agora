@@ -287,10 +287,13 @@ footer small {
   border: 2px solid white;
   margin-top: 16px;
   margin: 24px auto 0 auto;
+  border: 2px solid var(--clr-secondary-300);
 }
 
 .link-01:hover {
-  background-color: #fc8200;
+  background-color: #fffb0d;
+  color: black;
+  border: 2px solid black;
 }
 
 /* icons */
@@ -428,17 +431,31 @@ nav ul.open {
 .signup-link {
   background-color: #fffb0d;
   color: black;
-  border-radius: 15px;
+  border-radius: 20px;
   padding: 4px 12px;
   font-weight: var(--fw-bold);
+  border: 2px solid #fffb0d;
 }
 
 .login-link {
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   color: black;
-  border-radius: 15px;
+  border-radius: 20px;
   padding: 4px 12px;
   font-weight: var(--fw-semi-bold);
+  border: 2px solid white;
+}
+
+.signup-link:hover {
+  background-color: #fffb0d;
+  color: black;
+  border: 2px solid black;
+}
+
+.login-link:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: 2px solid black;
 }
 
 @media screen and (min-width: 768px) {
@@ -786,16 +803,24 @@ feature_card-body {
   padding: 0 16px;
   width: fit-content;
   margin: 48px auto 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
-@media (min-width: 1200px) {
-  .info {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0 16px;
-    width: fit-content;
-    margin: 48px auto 0 auto;
-  }
+.info img {
+  width: min(100%, 650px);
+  height: auto;
+}
+
+.info__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: min(100%, 64px);
+}
+
+.info p {
+  font-size: var(--fs-500);
+  padding: 0 32px 0 0;
 }
 
 /* testimonials */
@@ -1212,12 +1237,28 @@ input[type="email"] {
   border: 2px solid white;
   margin-top: 16px;
   margin: 24px auto 0 auto;
+  border: 2px solid var(--agora-brand-colour);
+}
+
+.signup .link-02:hover {
+  background-color: #fffb0d;
+  color: black;
+  border: 2px solid black;
 }
 
 /* login.html */
 .login {
   width: min(100%, 350px);
-  margin: 96px auto 0 auto;
+  margin: 32px auto 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .login {
+    width: min(100%, 350px);
+    margin: 64px auto 0 auto;
+    padding: 0 16px;
+  }
 }
 
 .login form label {
@@ -1313,6 +1354,13 @@ input[type="email"] {
   border: 2px solid white;
   margin-top: 16px;
   margin: 24px auto 0 auto;
+  border: 2px solid var(--agora-brand-colour);
+}
+
+.login .link-02:hover {
+  background-color: #fffb0d;
+  color: black;
+  border: 2px solid black;
 }
 
 .login_btn__wrapper {
@@ -1336,6 +1384,10 @@ input[type="email"] {
   align-items: center;
   justify-content: center;
   background-color: white;
+}
+
+.login_btn:hover {
+  background-color: rgb(246, 246, 246);
 }
 
 .or {
@@ -1379,6 +1431,10 @@ input[type="email"] {
   font-family: var(--ff-primary-100);
   font-weight: var(--fw-regular);
   color: var(--clr-neutral-500);
+}
+
+.login_create a:hover {
+  color: #436db5a2;
 }
 
 .login_create a {
