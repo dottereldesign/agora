@@ -313,7 +313,7 @@ section.feature,
 section.testimonials,
 section.info,
 footer {
-  margin-top: 96px;
+  margin-top: 64px;
 }
 
 main {
@@ -434,7 +434,6 @@ nav ul.open {
   border-radius: 20px;
   padding: 4px 12px;
   font-weight: var(--fw-bold);
-  border: 2px solid #fffb0d;
 }
 
 .login-link {
@@ -443,16 +442,17 @@ nav ul.open {
   border-radius: 20px;
   padding: 4px 12px;
   font-weight: var(--fw-semi-bold);
-  border: 2px solid white;
 }
-
+/* 
 .signup-link:hover {
-  border: 2px solid black;
+  background-color: #fffb0d;
+  color: black;
 }
 
 .login-link:hover {
-  border: 2px solid black;
-}
+  background-color: white;
+  color: black;
+} */
 
 @media screen and (min-width: 768px) {
   .header_nav-menu {
@@ -806,32 +806,52 @@ feature_card-body {
 .info img {
   width: min(100%, 650px);
   height: auto;
+  margin-top: 32px;
 }
 
 .info__wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: min(100%, 64px);
+  display: initial;
 }
 
 .info p {
   font-size: var(--fs-500);
-  padding: 0 32px 0 0;
+  padding: 0;
+  max-inline-size: 650px;
+}
+
+@media (min-width: 1000px) {
+  .info {
+    padding: 0 16px;
+    width: fit-content;
+    margin: 48px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info img {
+    width: min(100%, 650px);
+    height: auto;
+    margin-top: 0;
+  }
+
+  .info__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: min(100%, 64px);
+  }
+
+  .info p {
+    font-size: var(--fs-500);
+    padding: 0 32px 0 0;
+  }
 }
 
 /* testimonials */
-.testimonials {
-  padding: 0 16px;
-  width: fit-content;
-  margin: 48px auto 0 auto;
-  background-color: var(--clr-neutral-300);
-}
 
 /* section - accordion */
 .accordion {
   width: min(100%, 700px);
-  margin: 48px auto;
-  padding: 0 16px;
+  margin: 48px auto 0 auto;
 }
 
 .accordion_questions {
@@ -881,13 +901,41 @@ feature_card-body {
 
 /* section - getInTouch */
 .getInTouch {
-  margin: 48px auto 0 auto;
-  padding: 0 16px;
-  width: min(100%, 700px);
+  width: min(100%, fit-content);
+  margin: 0 auto;
+}
+
+.getInTouch h2 {
+  width: fit-content;
 }
 
 .getInTouch textarea {
   width: 100%;
+}
+
+.accordion_contact__wrapper {
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 2;
+  width: min(100%, 1400px);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 1100px) {
+  .accordion_contact__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: initial;
+    width: min(100%, 1400px);
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  .getInTouch {
+    width: min(100%, fit-content);
+    margin: 0 0 0 auto;
+  }
 }
 
 label {
@@ -1004,10 +1052,6 @@ picture {
 .hero_img {
   width: 100%;
   height: auto;
-}
-
-.info picture {
-  margin: 16px 0 0 0;
 }
 
 /* Subpage - Signup (Grid) */
