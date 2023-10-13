@@ -984,14 +984,89 @@ picture {
 }
 
 /* Subpage - Signup (Grid) */
+/* .img__container {
+  background-color: var(--clr-primary-600);
+  background-image: url("../image/svg/signup_img.svg");
+  background-repeat: no-repeat;
+  background-position: center top 0;
+  background-size: contain;
+  width: min(100% - 32px, 700px);
+  height: 280px;
+  overflow: hidden;
+  margin: 16px auto 0 auto;
+}
+
+@media (min-width: 300px) {
+  .img__container {
+    background-color: var(--clr-primary-600);
+    background-image: url("../image/svg/signup_img.svg");
+    background-repeat: no-repeat;
+    background-position: center top 0;
+    background-size: contain;
+    width: min(100% - 32px, 700px);
+    height: 250px;
+    overflow: hidden;
+    margin: 16px auto 0 auto;
+  }
+}
+
+@media (min-width: 350px) {
+  .img__container {
+    background-color: var(--clr-primary-600);
+    background-image: url("../image/svg/signup_img.svg");
+    background-repeat: no-repeat;
+    background-position: center top 0;
+    background-size: contain;
+    width: min(100% - 32px, 700px);
+    height: 300px;
+    overflow: hidden;
+    margin: 16px auto 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .signup__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    order: reverse;
+  }
+
+  .signup__wrapper img {
+    grid-column: 2/2;
+  }
+
+  .signup {
+    grid-column: 1/1;
+    grid-row: 1;
+  }
+} */
 .signup {
   width: min(100%, 350px);
-  margin: 64px auto 0 auto;
+  margin: 32px auto 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .signup {
+    margin: 64px auto 0 auto;
+  }
+}
+
+.signup h2 {
+  width: min(100%, 490px);
+}
+
+.signup p {
+  font-size: var(--fs-400);
+  color: var(--clr-neutral-500);
+  font-family: var(--ff-primary-100);
+  margin-top: 16px;
+  width: min(100%, 350px);
 }
 
 .signup form label {
   width: fit-content;
-  margin-top: 16px;
+  margin-top: var(--fs-400);
   font-family: var(--ff-primary-100);
   font-size: 13px;
   font-weight: var(--fw-semi-bold);
@@ -1057,18 +1132,6 @@ select {
   background-size: 16px;
   width: 30px;
   height: 30px;
-}
-
-.signup p {
-  font-size: 16.5px;
-  color: var(--clr-neutral-500);
-  font-family: var(--ff-primary-100);
-  margin-top: 16px;
-  width: min(100%, 350px);
-}
-
-.signup h2 {
-  width: min(100%, 490px);
 }
 
 fieldset {
