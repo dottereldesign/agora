@@ -1921,7 +1921,7 @@ input[type="email"] {
   color: white;
   text-decoration: none;
   font-family: var(--ff-primary-100);
-  font-size: var(--fs-600);
+  font-size: var(--fs-500);
   padding: 8px 16px;
   border-radius: 25px;
   font-weight: var(--fw-semi-bold);
@@ -1939,6 +1939,11 @@ input[type="email"] {
   background-size: 120px auto;
   border-radius: 0 0 0 15px;
   z-index: 1000;
+}
+
+.shop {
+  width: min(100%, 1400px);
+  margin: 32px auto 0 auto;
 }
 
 /* dashboard.html */
