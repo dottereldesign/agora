@@ -57,38 +57,224 @@
         <a class="shop_add_item" href="#">Add Item</a>
       </div>
       <div class="shop_grid__wrapper">
-        <div class="shop_navigation"><h3>Filter</h3></div>
+        <div class="shop_navigation">
+          <h3>Category</h3>
+          <form class="shop_navigation-form">
+            <label for="baby"
+              ><input
+                class="baby"
+                type="checkbox"
+                id="baby"
+                name="category"
+                value="Baby"
+              />
+              Baby</label
+            >
+            <label for="beauty"
+              ><input
+                type="checkbox"
+                id="beauty"
+                name="category"
+                value="Beauty"
+              />
+              Beauty</label
+            >
+            <label for="books"
+              ><input
+                type="checkbox"
+                id="books"
+                name="category"
+                value="Books"
+              />
+              Books</label
+            >
+            <label for="clothing"
+              ><input
+                class="clothing"
+                type="checkbox"
+                id="clothing"
+                name="category"
+                value="Clothing"
+              />
+              Clothing</label
+            >
+            <label for="electronics"
+              ><input
+                type="checkbox"
+                id="electronics"
+                name="category"
+                value="Electronics"
+              />
+              Electronics</label
+            >
+            <label for="grocery"
+              ><input
+                type="checkbox"
+                id="grocery"
+                name="category"
+                value="Grocery"
+              />
+              Grocery</label
+            >
+            <label for="pet"
+              ><input type="checkbox" id="pet" name="category" value="Pet" />
+              Pet</label
+            >
+            <label for="health"
+              ><input
+                type="checkbox"
+                id="health"
+                name="category"
+                value="Health"
+              />
+              Health</label
+            >
+            <label for="homekitchen"
+              ><input
+                type="checkbox"
+                id="homekitchen"
+                name="category"
+                value="Home & Kitchen"
+              />
+              Home & Kitchen</label
+            >
+            <label for="office"
+              ><input
+                type="checkbox"
+                id="office"
+                name="category"
+                value="Office"
+              />
+              Office</label
+            >
+            <label for="garden"
+              ><input
+                type="checkbox"
+                id="garden"
+                name="category"
+                value="Garden"
+              />
+              Garden</label
+            >
+            <label for="sports"
+              ><input
+                type="checkbox"
+                id="sports"
+                name="category"
+                value="Sports"
+              />
+              Sports</label
+            >
+            <label for="toys"
+              ><input type="checkbox" id="toys" name="category" value="Toys" />
+              Toys</label
+            >
+          </form>
+        </div>
+
         <div class="shop_item__wrapper">
           <article class="shop_item">
-            <a href="#"><img src="../image/aerogard.png" alt="" /></a>
+            <a href="#" aria-label="View Product"
+              ><img src="../image/aerogard.png" alt="Aerogard product image"
+            /></a>
             <div class="shop_item-header">
               <a href="#">
                 <h4>Aerogard</h4>
               </a>
               <div class="price">$10.00</div>
             </div>
-            <p class="shop_item-description" id="#shop_item-description">
+
+            <p class="shop_item-description" id="shopItemDescription">
               Aerogard Heavy Duty 40% Deet Repellent
             </p>
-            <p class="shop_item-leading_bid">
-              Leading Bid: <br />
-              <span id="#shopItemLeadingBid">The Warehouse, Nelson</span>
+
+            <p class="shop_item-seller">
+              Seller: <br />
+              <span id="shopItemLeadingBid">The Warehouse Group</span>
             </p>
+
             <p class="shop_item-auction_close">
-              Auction Closes: <br />
-              <span id="auctionCloseTime">17:29</span>
+              Auction Ends: <br />
+              <span id="auctionCloseTime">17:30</span>
             </p>
-            <a class="shop_item-link" href="#">Bid +1%</a>
+
+            <button
+              id="shopItemBtn"
+              class="shop_item-link"
+              aria-label="Bid Now"
+            >
+              Bid
+            </button>
           </article>
+
           <article class="shop_item">
-            <img src="../image/weet_bix.png" alt="" />
+            <a href="#" aria-label="View Product"
+              ><img src="../image/weet_bix.png" alt="Aerogard product image"
+            /></a>
             <div class="shop_item-header">
-              <h4>Sanitarium Weet-Bix 1.2kg</h4>
+              <a href="#">
+                <h4>Weet-Bix</h4>
+              </a>
               <div class="price">$6.00</div>
             </div>
-            <p>Weet-Bix is packed full of 97% wholegrain goodness.</p>
-            <a href="#">Bid +1%</a>
+
+            <p class="shop_item-description" id="shopItemDescription">
+              Weet-Bix is packed full of 97% wholegrain goodness.
+            </p>
+
+            <p class="shop_item-seller">
+              Seller: <br />
+              <span id="shopItemLeadingBid">The Warehouse Group</span>
+            </p>
+
+            <p class="shop_item-auction_close">
+              Auction Ends: <br />
+              <span id="auctionCloseTime">18:30</span>
+            </p>
+
+            <button
+              id="shopItemBtn"
+              class="shop_item-link"
+              aria-label="Bid Now"
+            >
+              Bid
+            </button>
           </article>
+
+          <article class="shop_item">
+            <a href="#" aria-label="View Product"
+              ><img src="../image/candle_5.png" alt="Aerogard product image"
+            /></a>
+            <div class="shop_item-header">
+              <a href="#">
+                <h4>Candle 5</h4>
+              </a>
+              <div class="price">$2.50</div>
+            </div>
+
+            <p class="shop_item-description" id="shopItemDescription">
+              Add a lovely finishing touch to your childs birthday cake.
+            </p>
+
+            <p class="shop_item-seller">
+              Seller: <br />
+              <span id="shopItemLeadingBid">The Warehouse Group</span>
+            </p>
+
+            <p class="shop_item-auction_close">
+              Auction Ends: <br />
+              <span id="auctionCloseTime">19:30</span>
+            </p>
+
+            <button
+              id="shopItemBtn"
+              class="shop_item-link"
+              aria-label="Bid Now"
+            >
+              Bid
+            </button>
+          </article>
+
           <article class="shop_item">
             <img src="../image/candle_5.png" alt="" />
             <div class="shop_item-header">

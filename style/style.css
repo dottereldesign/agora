@@ -2080,7 +2080,7 @@ input[type="email"] {
   padding: 0 16px;
 }
 
-.shop_item-leading_bid {
+.shop_item-seller {
   font-family: var(--ff-primary-100);
   margin-top: 8px;
   font-size: 13px;
@@ -2088,7 +2088,7 @@ input[type="email"] {
   font-weight: var(--fw-semi-bold);
 }
 
-.shop_item-leading_bid span {
+.shop_item-seller span {
   font-weight: var(--fw-regular);
   font-size: 12px;
 }
@@ -2109,13 +2109,13 @@ input[type="email"] {
 }
 
 .shop_item-auction_close span {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: var(--fw-regular);
 }
 
 .price {
   font-family: var(--ff-primary-100);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: var(--fw-bold);
   padding-left: 8px;
   line-height: 1;
@@ -2133,10 +2133,37 @@ input[type="email"] {
   border-radius: 0 0 15px 15px;
   margin: auto auto 0 auto;
   text-align: center;
+  border: none;
+  cursor: pointer;
 }
 
-.shop_item-link {
-  background-color: rgb(78, 78, 255);
+.shop_item-link:hover {
+  background-color: rgb(61, 30, 237, 0.8);
 }
 
-/* animation */
+.shop_navigation {
+  padding: 16px;
+  font-family: var(--ff-primary-100);
+}
+
+.news_card a {
+  text-decoration-color: black;
+}
+
+.shop_navigation-form input {
+  margin-right: 8px;
+}
+
+.shop_navigation-form label {
+  display: flex;
+}
+
+.shop_navigation input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+.shop_navigation h3 {
+  padding: 0;
+  margin: 0 0 16px 0;
+}
