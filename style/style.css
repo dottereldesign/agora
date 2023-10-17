@@ -703,6 +703,7 @@ main h1 {
     margin: 24px 0 0 0;
     border-radius: 15px;
     max-width: 328px;
+    border: 1px solid #e4e4e4;
   }
 
   .news_card img {
@@ -756,6 +757,7 @@ main h1 {
   background-color: white;
   border-radius: 15px;
   padding: 16px;
+  border: 1px solid #e4e4e4;
 }
 
 .info h2 {
