@@ -1631,7 +1631,7 @@ input[type="email"] {
 
 #role,
 #location,
-#hqlocation {
+#hqLocation {
   width: min(100%, 350px);
   padding: 4px 0 4px 8px;
   border: 2px solid #dedde2;
@@ -2116,6 +2116,10 @@ input[type="email"] {
 }
 
 /* dashboard.php */
+.dashboard {
+  padding: 0 16px;
+}
+
 .dashboard_title {
   width: min(100%, 1400px);
   margin: 32px auto;
@@ -2127,7 +2131,7 @@ input[type="email"] {
   border: 1px solid #e4e4e4;
   border-radius: 15px;
   display: grid;
-  grid-template-columns: 2fr 1px 6fr;
+  grid-template-columns: 1fr;
 }
 
 .dashboard_vertical-seperator {
@@ -2156,4 +2160,59 @@ input[type="email"] {
 .dashboard_setting-current,
 .dashboard_setting-manage {
   padding: 16px;
+}
+
+@media (min-width: 1200px) {
+  .dashboard_title {
+    width: min(100%, 1400px);
+    margin: 32px auto;
+  }
+
+  .dashboard__wrapper {
+    width: min(100%, 1400px);
+    margin: 32px auto;
+    border: 1px solid #e4e4e4;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 2fr 1px 6fr;
+  }
+
+  .dashboard_vertical-seperator {
+    height: 100%;
+    width: 1px;
+    background-color: #e4e4e4;
+  }
+
+  .dashboard_horizontal-seperator {
+    height: 1px;
+    width: 100%;
+    background-color: #e4e4e4;
+  }
+
+  .dashboard_profile {
+    padding: 16px;
+  }
+
+  .dashboard__wrapper h3 {
+    margin-top: 0;
+  }
+
+  .dashboard_setting-buyer,
+  .dashboard_setting-seller,
+  .dashboard_setting-listing,
+  .dashboard_setting-current,
+  .dashboard_setting-manage {
+    padding: 16px;
+  }
+}
+
+.dashboard p {
+  font-size: 16.5px;
+  font-family: var(--ff-primary-100);
+  font-weight: var(--fw-regular);
+}
+
+.dashboard h4 {
+  font-weight: var(--fw-semi-bold);
+  margin-top: 16px;
 }
