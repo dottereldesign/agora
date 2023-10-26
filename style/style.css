@@ -722,6 +722,10 @@ main h1 {
   }
 }
 
+.news a {
+  text-decoration: none;
+}
+
 /* section - info */
 .info {
   padding: 0 16px;
@@ -729,11 +733,6 @@ main h1 {
   margin: 48px auto 0 auto;
   display: flex;
   flex-direction: column;
-  animation: fadeIn 5s;
-  -webkit-animation: fadeIn 5s;
-  -moz-animation: fadeIn 5s;
-  -o-animation: fadeIn 5s;
-  -ms-animation: fadeIn 5s;
 }
 
 .info img {
@@ -744,13 +743,17 @@ main h1 {
 }
 
 .info_body__container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
+  display: flex;
+  flex-direction: column;
 }
 
 .info__wrapper {
-  display: initial;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info__wrapper img {
 }
 
 .info_body__wrapper {
@@ -767,7 +770,7 @@ main h1 {
 .info p {
   padding: 0;
   max-inline-size: 650px;
-  font-size: 18px;
+  font-size: 16.5px;
   font-weight: var(--fw-regular);
 }
 
@@ -775,50 +778,64 @@ main h1 {
   margin: 0;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1432px) {
   .info {
-    padding: 0 16.5px;
+    padding: 0;
     width: min(100%, 1400px);
     margin: 48px auto 0 auto;
     display: flex;
     flex-direction: column;
   }
 
+  .info p {
+    padding: 0;
+    max-inline-size: 650px;
+    font-size: 18px;
+    font-weight: var(--fw-regular);
+  }
+
   .info img {
-    width: min(100%, 450px);
+    width: min(100%, 520px);
     height: auto;
     margin-top: 0;
     border-radius: 15px;
   }
 
   .info__wrapper {
-    display: flex;
-    justify-items: right;
-    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    justify-items: left;
+    grid-template-columns: 2fr 1fr;
     gap: min(100%, 64px);
+  }
+
+  .info_body__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
   }
 }
 
 /* testimonials */
 .testimonial {
   display: grid;
-  gap: 50px;
+  gap: 16px;
   grid-template-columns: 1;
   grid-template-rows: 2;
-  margin: 208px auto 0 auto;
+  margin: 64px auto 0 auto;
   width: min(100%, 1400px);
   overflow: visible;
+  padding: 0 16px;
 }
 
 .testimonial_card {
   display: grid;
-  grid-template-columns: 2fr 3fr;
-  height: 250px;
+  grid-template-columns: 1;
+  height: auto;
   border-radius: 15px;
   width: min(100%, 684px);
   margin: 0 auto;
   position: relative;
-  padding: 16px 16px 16px 0;
+  padding: 16px 16px 48px 16px;
 }
 
 .testimonial_card-body {
@@ -830,94 +847,18 @@ main h1 {
 }
 
 .testimonial_card-01 {
-  background: linear-gradient(270deg, #7526e3, #d0129f);
+  background: #d0129f;
   background-size: 400% 400%;
-
-  -webkit-animation: AnimationName 30s ease infinite;
-  -moz-animation: AnimationName 30s ease infinite;
-  animation: AnimationName 30s ease infinite;
-}
-
-@-webkit-keyframes AnimationName {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-@-moz-keyframes AnimationName {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-@keyframes AnimationName {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 .testimonial_card-02 {
   background-color: var(--clr-primary-300);
-  margin-top: 68px;
+  margin-top: 0;
 }
 
 .testimonial_card-02 {
-  background: linear-gradient(270deg, hsl(245, 77%, 52%, 0), #7526e3);
+  background: #7526e3;
   background-size: 400% 400%;
-
-  -webkit-animation: AnimationName 10s ease infinite;
-  -moz-animation: AnimationName 10s ease infinite;
-  animation: AnimationName 10s ease infinite;
-}
-
-@-webkit-keyframes AnimationName {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-@-moz-keyframes AnimationName {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-@keyframes AnimationName {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 .testimonial_card p {
@@ -973,6 +914,7 @@ main h1 {
   background-size: 220px auto;
   border-radius: 0 0 0 15px;
   z-index: 1000;
+  display: none;
 }
 
 .testimonial_card-01::after {
@@ -1000,6 +942,7 @@ main h1 {
   background-size: 250px auto;
   border-radius: 0 0 0 15px;
   z-index: 1000;
+  display: none;
 }
 
 .testimonial_card-02::after {
@@ -1102,6 +1045,7 @@ main h1 {
     background-size: 220px auto;
     border-radius: 0 0 0 15px;
     z-index: 1000;
+    display: initial;
   }
 
   .testimonial_card-01::after {
@@ -1129,6 +1073,7 @@ main h1 {
     background-size: 250px auto;
     border-radius: 0 0 0 15px;
     z-index: 1000;
+    display: initial;
   }
 
   .testimonial_card-02::after {
